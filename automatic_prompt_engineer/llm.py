@@ -210,7 +210,7 @@ class GPT_Forward(LLM):
         while response is None:
             try:
                 response = openai.Completion.create(
-                    **config, prompt=text)
+                    **config, engine="query-quest-generic", prompt=text)
             except Exception as e:
                 print(e)
                 print('Retrying...')
