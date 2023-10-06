@@ -7,7 +7,6 @@ generation:
     batch_size: 500
     gpt_config:
       model: text-davinci-003
-      engine: query-quest-generic
       temperature: 0.9
       max_tokens: 50
       top_p: 0.9
@@ -22,7 +21,6 @@ evaluation:
     batch_size: 500
     gpt_config:
       model: text-davinci-003
-      engine: query-quest-generic
       temperature: 0.7
       max_tokens: 200
       top_p: 1.0
@@ -34,7 +32,6 @@ demo:
     batch_size: 500
     gpt_config:
       model: text-davinci-003
-      engine: query-quest-generic
       temperature: 0.7
       max_tokens: 200
       top_p: 1.0
