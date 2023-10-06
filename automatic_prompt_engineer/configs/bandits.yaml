@@ -41,6 +41,7 @@ demo:
     batch_size: 500
     gpt_config:
       model: text-davinci-002
+      engine: query-quest-generic
       temperature: 0.7
       max_tokens: 200
       top_p: 1.0
