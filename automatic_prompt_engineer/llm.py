@@ -158,7 +158,7 @@ class GPT_Forward(LLM):
         while response is None:
             try:
                 response = openai.Completion.create(
-                    **config, prompt=prompt)
+                    **config, engine="query-quest-generic", prompt=prompt)
             except Exception as e:
                 if 'is greater than the maximum' in str(e):
                     raise BatchSizeException()
@@ -181,7 +181,7 @@ class GPT_Forward(LLM):
         while response is None:
             try:
                 response = openai.Completion.create(
-                    **config, prompt=prompt)
+                    **config, engine="query-quest-generic", prompt=prompt)
             except Exception as e:
                 print(e)
                 print('Retrying...')
@@ -317,7 +317,7 @@ class GPT_Insert(LLM):
         while response is None:
             try:
                 response = openai.Completion.create(
-                    **config, prompt=prefix, suffix=suffix)
+                    **config, engine="query-quest-generic", prompt=prefix, suffix=suffix)
             except Exception as e:
                 print(e)
                 print('Retrying...')
